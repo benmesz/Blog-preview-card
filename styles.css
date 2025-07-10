@@ -1,0 +1,139 @@
+:root {
+  /* Colors */
+  --primary: #f4d04e;
+  --gray-950: #111111;
+  --gray-500: #6b6b6b;
+  --white: #ffffff;
+
+  /* Spacings */
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-300: 24px;
+
+  /* Font family */
+  --font-figtree: "Figtree", sans-serif;
+
+  /* Font sizes */
+  --font-size-l: 24px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+
+  /* Font weights */
+  --font-medium: 500;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* Line height */
+  --line-height: 150%;
+
+  /* Letter spacing */
+  --letter-spacing: 0px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-figtree);
+  color: var(--gray-950);
+  background-color: var(--primary);
+  line-height: var(--line-height);
+  height: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 384px;
+  background-color: var(--white);
+  padding: var(--spacing-300);
+  gap: var(--spacing-300);
+  border-radius: 20px;
+  border: 1px solid var(--gray-950);
+  filter: drop-shadow(var(--spacing-100) var(--spacing-100) var(--gray-950));
+}
+
+.cover-image {
+  border-radius: 10px;
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+}
+
+.attribution {
+  font-size: var(--font-size-s);
+  text-align: center;
+  position: relative;
+  padding: 0 var(--spacing-300) var(--spacing-50) var(--spacing-300);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.author-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-150);
+}
+
+.label-container {
+  background-color: var(--primary);
+  width: min-content;
+  padding: var(--spacing-50) var(--spacing-150);
+  border-radius: 4px;
+}
+
+.textTitle {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-extrabold);
+}
+
+.textBody {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-medium);
+  color: var(--gray-500);
+}
+
+.textLabel {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-extrabold);
+}
+
+.textMeta {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-medium);
+  line-height: var(--line-height);
+}
+
+.avatar {
+  height: 32px;
+  width: 32px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-150);
+}
+
+section {
+  flex-grow: 2;
+  align-content: center;
+  justify-items: center;
+  padding: var(--spacing-300);
+}
+
+/*Hover state*/
+.textTitle:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
